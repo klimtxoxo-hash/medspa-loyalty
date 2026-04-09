@@ -1,6 +1,5 @@
 // src/App.js
 import { useState, useEffect } from 'react';
-import { AuthProvider, useAuth } from './lib/AuthContext';
 import { supabase, PRACTICE_SLUG } from './lib/supabase';
 import Login from './pages/Login';
 import PatientDashboard from './pages/PatientDashboard';
@@ -8,7 +7,9 @@ import StaffDashboard from './pages/StaffDashboard';
 import { FONT_IMPORT, GLOBAL_STYLES } from './lib/styles';
 
 function Router() {
-  const { user, role, loading } = useAuth();
+  const user = null;
+  const role = null;
+  const loading = false;
   const [practiceName, setPracticeName] = useState('');
 
   useEffect(() => {
